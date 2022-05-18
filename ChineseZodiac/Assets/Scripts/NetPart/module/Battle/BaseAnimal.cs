@@ -47,8 +47,8 @@ public class BaseAnimal : MonoBehaviour
         skin.transform.parent = this.transform;
         skin.transform.localPosition = Vector3.zero;
         //ÎïÀí
-        rigidBody = gameObject.AddComponent<Rigidbody>();
-        BoxCollider boxCollider = gameObject.AddComponent<BoxCollider>();
+        //rigidBody = gameObject.AddComponent<Rigidbody>();
+        //BoxCollider boxCollider = gameObject.AddComponent<BoxCollider>();
         //boxCollider.center = new Vector3(0, 2.5f, 1.47f);
         //boxCollider.size = new Vector3(7, 5, 12);
         //ÅÚËþÅÚ¹Ü

@@ -22,16 +22,16 @@ public class GameMain : MonoBehaviour
         //BattleManager.Init();
         ////打开登陆面板
         //PanelManager.Open<LoginPanel>();
-               
+
         //单机功能启动这里
-        AnimalInfo animalInfo = new AnimalInfo();        
+        AnimalInfo animalInfo = new AnimalInfo();
         animalInfo.id = "y";
-        animalInfo.camp = 1;//不同camp不同动物
-        animalInfo.x = -1471.636f;
-        animalInfo.y = 16.12352f;
-        animalInfo.z = -112.2672f;
+        animalInfo.camp = 2;//不同camp不同动物
+        animalInfo.x = -10.636f;
+        animalInfo.y = 26.12352f;
+        animalInfo.z = -150.2672f;
         BattleManager.GenerateAnimal(animalInfo);
-}
+    }
 
 
     // Update is called once per frame
