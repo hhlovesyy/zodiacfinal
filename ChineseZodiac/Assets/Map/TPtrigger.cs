@@ -9,11 +9,12 @@ public class TPtrigger : MonoBehaviour
     private GameObject tpmanager;
     private int well_nums = 0;
     public int if_certain = 0;
+    public bool isinwell;
 
     void Start()
     {
         tpmanager = GameObject.Find("TPmanager");
-
+        isinwell = false;
 
         if (if_certain == 1)
         {
@@ -34,15 +35,20 @@ public class TPtrigger : MonoBehaviour
 
     void OnTriggerEnter(Collider collider)
     {
+        isinwell = true;
         print(collider.gameObject.name + ":" + Time.time);
         Transport(collider.gameObject);
+    }
+    private void OnTriggerExit(Collider other)
+    {
+        isinwell = false;
     }
 
     private void Transport(GameObject player)
     {
         System.Random r = new System.Random();
         int idx = 0;
-        while (true)
+        while (isinwell)
         {
             idx = r.Next(0, well_nums);
             Debug.Log("the well index=" + idx);
@@ -52,6 +58,8 @@ public class TPtrigger : MonoBehaviour
                 Debug.Log(this.transform.parent.gameObject);
                 Vector3 position = wells[idx].transform.position;
                 position.y += 10;
+                position.z += 10;
+                position.x += 10;
                 Debug.Log(player);
                 Debug.Log(position);
                 player.GetComponent<CharacterController>().enabled =false;
