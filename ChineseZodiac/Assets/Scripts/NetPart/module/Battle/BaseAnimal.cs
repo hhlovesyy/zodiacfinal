@@ -45,7 +45,7 @@ public class BaseAnimal : MonoBehaviour
         GameObject skinRes = ResManager.LoadPrefab(skinPath);
         skin = (GameObject)Instantiate(skinRes);
         skin.transform.parent = this.transform;
-        skin.transform.localPosition = Vector3.zero;
+        // skin.transform.localPosition = Vector3.zero;
         //ŒÔ¿Ì
         //rigidBody = gameObject.AddComponent<Rigidbody>();
         //BoxCollider boxCollider = gameObject.AddComponent<BoxCollider>();

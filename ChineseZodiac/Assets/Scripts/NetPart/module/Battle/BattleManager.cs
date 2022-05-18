@@ -134,9 +134,10 @@ public class BattleManager
             ////itemManager = GameObject.Find("ItemManager");
             ///
 
-            GameObject minimap = GameObject.Find("UI_MiniMap");
-            MiniMapFollowController miniMapFollowController = minimap.GetComponent<MiniMapFollowController>();
-            miniMapFollowController.player = animal.transform;
+            GameObject minimap = GameObject.Find("UI_Map");
+            Debug.Log(minimap.name);
+            MiniMapController miniMapController = minimap.GetComponent<MiniMapController>();
+            miniMapController.Player = animal.transform;
 
             ItemManager.playeranimal = animalObj;///
 

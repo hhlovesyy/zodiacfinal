@@ -27,9 +27,9 @@ public class GameMain : MonoBehaviour
         AnimalInfo animalInfo = new AnimalInfo();
         animalInfo.id = "y";
         animalInfo.camp = 2;//不同camp不同动物
-        animalInfo.x = -10.636f;
-        animalInfo.y = 26.12352f;
-        animalInfo.z = -150.2672f;
+        animalInfo.x = -4.636f;
+        animalInfo.y =20.241f;
+        animalInfo.z = 10.2672f;
         BattleManager.GenerateAnimal(animalInfo);
     }
 
